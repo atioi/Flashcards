@@ -1,5 +1,5 @@
-import {Div} from "../../components/Div.js";
-import {Paragraph} from "../../components/Paragraph.js";
+import {Div} from "./../../components/Div.js";
+import {Paragraph} from "./../../components/Paragraph.js";
 
 class Card extends Div {
 

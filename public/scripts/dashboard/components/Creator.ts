@@ -1,4 +1,4 @@
-import {Div} from ".../../components/Div.js";
+import {Div} from "../../components/Div.js";
 import {Input} from "../../components/Input.js";
 import {Button} from "../../components/Button.js";
 

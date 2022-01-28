@@ -1,4 +1,4 @@
-import {Div} from "../../components/Div.js";
+import {Div} from "./../../components/Div.js";
 import {Card} from "./Card.js";
 import {Set} from "./Set.js";
 
