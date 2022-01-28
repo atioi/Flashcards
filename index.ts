@@ -1,9 +1,17 @@
-import * as http from 'http';
-import {Router} from "./Router";
-import root from "./src/root";
-import _static from "./src/_static";
+import express from "express";
+import * as path from "path";
 
-Router.get('/', root);
-Router.get('public', _static);
+const app = express();
 
-Router.listen(8080);
+app.use(express.static(path.join(__dirname, 'public')))
+
+app.get('/', (req, res) => {
+    const p = path.join(__dirname, 'public/views/dashboard.html');
+    res.sendFile(p);
+})
+
+
+
+
+app.listen(8080);
+
