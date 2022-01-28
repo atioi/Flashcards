@@ -1,4 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
 body {
-    background-color: dimgray;
+    background-color: rgba(247, 251, 252, 0.68);
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.Dashboard {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: max-content auto;
+    grid-template-areas: "menu menu" "list creator";
+
+}
+
+.Menu {
+    box-sizing: border-box;
+
+
+    display: grid;
+    grid-template-columns: max-content 10% max-content auto max-content;
+    grid-template-rows: auto;
+    grid-template-areas: "title . createset . logout";
+
+    background-color: white;
+
+    padding: 0 3rem;
+
+    grid-area: menu;
+    box-shadow: 2px 0 0.5rem black;
+
+    position: relative;
+    z-index: 5;
+
+}
+
+.Menu h1 {
+    width: min-content;
+    height: min-content;
+    grid-area: title;
+    align-self: center;
+
+
+
+}
+
+.Button {
+    border: none;
+    outline: none;
+
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    border-bottom: solid 2px transparent;
+
+    cursor: pointer;
+    background-color: transparent;
+
+
+}
+
+.Create{
+    grid-area: createset;
+}
+
+.Logout{
+    grid-area: logout;
+    margin: 0 2rem;
+}
+
+.Button:hover {
+    border-bottom: solid 2px blue;
+    font-weight: bold;
+}
+
+.Sets-List {
+    width: 100%;
+    height: 100%;
+
+    grid-area: list;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+
+    /*background-color: rgba(237, 244, 255, 0.78);*/
+
+    background-color: transparent;
+    overflow: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.Creator {
+    padding: 2rem 2rem;
+
+    width: 100%;
+    height: 100%;
+
+    grid-area: creator;
+}
+
+.Input {
+    font-size: 2rem;
+
+    border: none;
+    border-bottom: solid 1px black;
+
+    outline: none;
+
+    background-color: transparent;
+}
+
+.Card {
+    margin: 1rem 2rem;
+    background-color: white;
+    text-align: center;
+
+    width: 22.2rem;
+    min-height: 14rem;
+
+    cursor: pointer;
+
+    box-shadow: 0.2rem 0.2rem 0.5rem #4e4e4e;
+
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: " . . . " "title title title" "count . . ";
+
+    position: relative;
+    z-index: -1;
+}
+
+.Card-Title {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    grid-area: title;
+    align-self: center;
+}
+
+.Card-Count {
+    grid-area: count;
+    align-self: center;
+}
+
+.Reviewer {
+    /*background-color: red;*/
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: auto 30rem auto;
+    grid-template-rows: auto 22rem auto;
+    grid-template-areas: ". . . " ". flash ." ". buttons .";
+
+    grid-area: creator;
+}
+
+.Next-Button {
+    margin-right: 5rem;
+    grid-area: buttons;
+    width: min-content;
+    height: min-content;
+    justify-self: end;
+
+    cursor: pointer;
+}
+
+.Before-Button {
+    grid-area: buttons;
+    width: min-content;
+    height: min-content;
+    justify-self: start;
+    margin-left: 5rem;
+
+    cursor: pointer;
+}
+
+
+.Flash {
+    padding: 2rem 3rem;
+    width: 30rem;
+    height: 20rem;
+    background-color: white;
+
+    box-shadow: 0.2rem 0.2rem 0.5rem #4e4e4e;
+
+    grid-area: flash;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+
+    cursor: pointer;
 }
 
