@@ -15,6 +15,7 @@ class Empty implements State {
         const info = new Div();
         const label = new Paragraph();
         label.text = 'Set is empty';
+        rev.className = 'Empty';
         info.append(label);
         rev.append(info);
     }

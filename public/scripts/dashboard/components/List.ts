@@ -27,6 +27,14 @@ class List extends Div {
         this.callback(i);
     }
 
+    public reload(sets: Set[]){
+        this.cards.forEach(card=> card.remove());
+        this.cards = [];
+        this.cards = sets.map((set, index) => new Card(set.name, index.toString()));
+        this.cards.forEach((card, index) => card.addEventListener('click', () => this.learn(index)));
+        this.list();
+
+    }
 
 }
 

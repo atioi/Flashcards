@@ -11,6 +11,11 @@ class Input extends Component {
         this.html.placeholder = placeholder;
     }
 
+
+    get value() {
+        return this._html.value;
+    }
+
 }
 
 export {Input};

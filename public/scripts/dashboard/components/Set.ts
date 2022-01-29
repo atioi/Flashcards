@@ -1,24 +1,31 @@
 import {Flashcard} from "./Flashcard.js";
 
 class Set {
+    get flashcards(): Flashcard[] {
+        return this._flashcards;
+    }
+
+    set flashcards(value: Flashcard[]) {
+        this._flashcards = value;
+    }
 
     private _name: string;
-    private flashcards: Flashcard[] = [];
+    private _flashcards: Flashcard[] = [];
 
     constructor(name: string) {
         this._name = name;
     }
 
     public append(flashcard: Flashcard) {
-        this.flashcards.push(flashcard);
+        this._flashcards.push(flashcard);
     }
 
     public getFlashcard(i: number) {
-        return this.flashcards[i];
+        return this._flashcards[i];
     }
 
     get len() {
-        return this.flashcards.length;
+        return this._flashcards.length;
     }
 
 

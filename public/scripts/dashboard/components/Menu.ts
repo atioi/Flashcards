@@ -1,8 +1,9 @@
 import {Div} from "./../../components/Div.js";
 import {Button} from "./../../components/Button.js"
+import {Dashboard} from "../index.js";
 
 class Menu extends Div {
-    constructor() {
+    constructor(dashboard: Dashboard) {
         super();
         this.className = 'Menu';
 
@@ -11,7 +12,7 @@ class Menu extends Div {
 
 
         const createSetButton: Button = new Button("Create set");
-        createSetButton.addEventListener('click', this.createSet.bind(this));
+        createSetButton.addEventListener('click', dashboard.create.bind(dashboard));
         createSetButton.className = 'Button Create';
 
         const logout: Button = new Button("Logout");
@@ -23,9 +24,6 @@ class Menu extends Div {
 
     }
 
-    protected createSet() {
-        alert('hello');
-    }
 
 }
 

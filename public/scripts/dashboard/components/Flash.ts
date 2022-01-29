@@ -81,6 +81,8 @@ class Flash extends Div {
         this._paragraph.text = this._flashcard.term;
     }
 
+
+
 }
 
 

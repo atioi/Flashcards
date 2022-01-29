@@ -1,6 +1,6 @@
 class Component {
 
-    private readonly _html: any;
+    protected readonly _html: any;
 
     constructor(html: any) {
         this._html = html;
@@ -28,6 +28,10 @@ class Component {
 
     public remove() {
         this.html.remove();
+    }
+
+    public appendClass(cls: string) {
+        this._html.classList.add(cls);
     }
 }
 

@@ -59,7 +59,6 @@ body {
     align-self: center;
 
 
-
 }
 
 .Button {
@@ -76,11 +75,11 @@ body {
 
 }
 
-.Create{
+.Create {
     grid-area: createset;
 }
 
-.Logout{
+.Logout {
     grid-area: logout;
     margin: 0 2rem;
 }
@@ -217,5 +216,135 @@ body {
 
 
     cursor: pointer;
+}
+
+.Set-Creator {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 3rem;
+
+    overflow: auto;
+}
+
+.Set-Creator input {
+    margin: 2rem 0 5rem 5rem;
+    align-self: start;
+    font-size: 2.5rem;
+
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: transparent;
+}
+
+
+.Flashcard-Creator {
+
+    width: min-content;
+    height: min-content;
+
+    padding: 5rem 3rem;
+
+    display: grid;
+    grid-template-rows: auto max-content;
+    grid-template-columns: max-content max-content;
+    grid-template-area: ". remove" "left right";
+
+
+    align-self: center;
+    justify-self: center;
+
+    box-shadow: 0.2rem 0.2rem 0.5rem #4e4e4e;
+
+    margin: 2rem 0;
+}
+
+.Flashcard-Creator input {
+
+    border: none;
+    margin: 2rem;
+    border-bottom: solid 1px black;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+
+
+}
+
+.Remove-Button {
+    grid-area: remove;
+
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Flashcard-Add-Button {
+    border: none;
+    background-color: transparent;
+    color: blue;
+    border-radius: 0.5rem;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.5rem #4e4e4e;
+
+    padding: 3rem 22rem;
+
+    margin-bottom: 4rem;
+}
+
+.Flashcard-Add-Button:hover {
+    color: orangered;
+}
+
+.Create-Set-Btn {
+    padding: 1.3rem 3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    color: white;
+    background-color: #00d9d9;
+    align-self: center;
+    cursor: pointer;
+
+    margin-bottom: 5rem;
+}
+
+.Create-Set-Btn:hover {
+    background-color: #00baba;
+}
+
+.Cannot-Be-Empty::placeholder {
+    color: rgba(255, 0, 0, 0.8);
+}
+
+
+.Empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
 }
 
